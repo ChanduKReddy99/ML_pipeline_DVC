@@ -6,10 +6,26 @@ base:
 
 
 data_source:
-    path: C:/Users/acreddy/Desktop/wine/winequality-red.csv
+    source_path: C:/Users/acreddy/Desktop/wine/winequality-red.csv
 
 
 artifacts:
-    artifacts_dir: artifacts_dir
+    artifacts_dir: artifacts
+
+    
     raw_local_data_dir: artifacts/raw_local_data_dir
-    raw_local_data: artifacts/raw_local_data
+    raw_local_data: artifacts/raw_local_data_dir/data.csv
+
+
+    split_data:
+        processed_data_dir: artifacts/processed_data
+        train_data: artifacts/processed_data/train.csv
+        test_data: artifacts/processed_data/test.csv
+
+
+        
+
+  
+
+
+

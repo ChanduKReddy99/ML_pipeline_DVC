@@ -1,0 +1,28 @@
+stages:
+  load_data:
+    cmd: python src/01_load_and_save_data.py --config=params.yaml
+    deps:
+      - src/01_load_and_save_data.py
+      - src/utils/common_utils.py
+    params:
+      - data_source.source_path
+      - artifacts.raw_local_data
+    outs:
+      - artifacts/raw_local_data_dir/data.csv
+  
+  split_data:
+    cmd: python src/02_split_data.py --config=params.yaml
+    deps:
+      - src/02_split_data.py
+      - src/utils/common_utils.py
+      - artifacts/raw_local_data_dir/data.csv
+    params:
+      - base.random_state
+      - base.test_size
+      - artifacts.raw_local_data
+      - artifacts.split_data.processed_data_dir
+      - artifacts.split_data.train_data
+      - artifacts.split_data.test_data
+    outs:
+      - artifacts/processed_data/train.csv
+      - artifacts/processed_data/test.csv
