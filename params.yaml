@@ -1,0 +1,15 @@
+base:
+    project: 'simple-dvc-ml-pipeline'
+    test_size: 0.2
+    random_state: 42
+    target: 'quality'
+
+
+data_source:
+    path: C:/Users/acreddy/Desktop/wine/winequality-red.csv
+
+
+artifacts:
+    artifacts_dir: artifacts_dir
+    raw_local_data_dir: artifacts/raw_local_data_dir
+    raw_local_data: artifacts/raw_local_data
