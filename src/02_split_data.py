@@ -39,7 +39,7 @@ def split_and_save_data(config_path):
 
 
 if __name__ == "__main__":
-    parser= argparse.ArgumentParser(description='Load and save data')
+    parser= argparse.ArgumentParser(description='split and save data')
     parser.add_argument('--config', type=str, default='params.yaml')
     parsed_args = parser.parse_args()
     

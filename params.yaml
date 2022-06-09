@@ -12,7 +12,6 @@ data_source:
 artifacts:
     artifacts_dir: artifacts
 
-    
     raw_local_data_dir: artifacts/raw_local_data_dir
     raw_local_data: artifacts/raw_local_data_dir/data.csv
 
@@ -22,6 +21,19 @@ artifacts:
         train_data: artifacts/processed_data/train.csv
         test_data: artifacts/processed_data/test.csv
 
+    reports:
+        reports_dir: artifacts/report
+        params: artifacts/report/params.json
+        scores: artifacts/report/scores.json
+
+    model_dir: artifacts/saved_models
+    model_path: artifacts/saved_models/model.joblib
+
+estimators:
+  ElasticNet:
+    params:
+      alpha: 0.4
+      l1_ratio: 0.55
 
         
 
