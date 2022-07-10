@@ -20,6 +20,6 @@ jobs:
        
           echo '# REPORTS' >> reports.md
           echo '## metrics' >> reports.md
-          cat scores.json >> report.md
+          cat artifacts/reports/scores.json >> report.md
           
           cml send-comment report.md
